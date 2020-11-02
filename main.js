@@ -18,7 +18,7 @@ const updateItemQuery = `
 const showPanel = document.getElementById('show_panel')
 
 // ---- connect to action cable ----
-const cable = ActionCable.createConsumer('wss://cashier-ql-5rb.herokuapp.com/cable')
+const cable = ActionCable.createConsumer('ws://localhost:3000/cable')
 cable.subscriptions.create('CashierStreamChannel', {
   connected() {
     console.log('CashierStream channel connected..')
